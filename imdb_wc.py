@@ -12,15 +12,14 @@
 import requests
 from bs4 import BeautifulSoup
 
-print ('imported stuff')
 url = 'http://www.imdb.com/chart/top?ref_=nv_ch_250_4'
 source_code = requests.get(url)
 plain_text = source_code.text
 soup = BeautifulSoup(plain_text, "html.parser")
 
-print ('done soupy stuff')
 
-for link in soup.findAll('td',{'class':'titleColumn'}):
-	print(link)
+for link in soup.find_all('td',{'class':'titleColumn'}):
+	href = link.find('a').get('href')
+	print (href)
 print ('done')
 	
