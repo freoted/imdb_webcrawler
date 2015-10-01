@@ -26,6 +26,10 @@ for link in soup.find_all('td',{'class':'titleColumn'}):
 	href = link.find('a').get('href')
 	#just print bit of link that you need
 	short_href = href[:17]
-	print (short_href)
+	#http://www.imdb.com/title/tt0111161/locations?ref_=tt_dt_dt
+	#locationlink
+	location_link = 'http://www.imdb.com' + short_href + 'locations?ref_=tt_dt_dt'
+	print (location_link)
+	
 print ('done')
 	
