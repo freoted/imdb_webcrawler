@@ -9,17 +9,23 @@
 # Relevant div id
 # <div id="filming_locations_content" class="header">
 
+#import dependencies
 import requests
 from bs4 import BeautifulSoup
 
+#This page lists the current top 250 movies on imdb
 url = 'http://www.imdb.com/chart/top?ref_=nv_ch_250_4'
+
+#grabs all the text from this page, and makes it a BeautifulSoup object
 source_code = requests.get(url)
 plain_text = source_code.text
 soup = BeautifulSoup(plain_text, "html.parser")
 
-
+#searches through BS4 object for all the title links
 for link in soup.find_all('td',{'class':'titleColumn'}):
 	href = link.find('a').get('href')
-	print (href)
+	#just print bit of link that you need
+	short_href = href[:17]
+	print (short_href)
 print ('done')
 	
