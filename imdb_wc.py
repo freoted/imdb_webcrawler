@@ -38,6 +38,6 @@ for link in soup.find_all('td',{'class':'titleColumn'}):
 	#prints name of location but also '7 of 7 found this interesting'
 	for loc_link in location_soup.find_all('div',{'id':'filming_locations_content'}):
 		for i in loc_link.find_all('a'):
-			print (i.contents)
+			print (i.contents[0])
 print ('done')
 	
