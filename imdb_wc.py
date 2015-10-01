@@ -35,9 +35,9 @@ for link in soup.find_all('td',{'class':'titleColumn'}):
 	location_plain_text = location_source_code.text
 	location_soup = BeautifulSoup(location_plain_text, "html.parser")
 
-	#finds locations for each movie but prints whole link, not just title
+	#prints name of location but also '7 of 7 found this interesting'
 	for loc_link in location_soup.find_all('div',{'id':'filming_locations_content'}):
-		print (loc_link.find_all('a'))
-	
+		for i in loc_link.find_all('a'):
+			print (i.contents)
 print ('done')
 	
