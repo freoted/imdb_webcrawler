@@ -30,14 +30,14 @@ for link in soup.find_all('td',{'class':'titleColumn'}):
 	#locationlink
 	location_link = 'http://www.imdb.com' + short_href + 'locations?ref_=tt_dt_dt'
 	print (location_link)
+	
 	location_source_code = requests.get(location_link)
 	location_plain_text = location_source_code.text
 	location_soup = BeautifulSoup(location_plain_text, "html.parser")
-	# This prints all the information for every movie, every location. Need to strip to title only.
-	
-	#<a href="/search/title?locations=Mansfield%20Reformatory%20-%20100%20Reformatory%20Road,%20Mansfield,%20Ohio,%20USA&amp;ref_=ttloc_loc_1" itemprop="url">Mansfield Reformatory - 100 Reformatory Road
+
+	#finds locations for each movie but prints whole link, not just title
 	for loc_link in location_soup.find_all('div',{'id':'filming_locations_content'}):
-		print (loc_link.find('a').contents[0])
+		print (loc_link.find_all('a'))
 	
 print ('done')
 	
