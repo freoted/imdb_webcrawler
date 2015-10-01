@@ -30,6 +30,12 @@ for link in soup.find_all('td',{'class':'titleColumn'}):
 	#locationlink
 	location_link = 'http://www.imdb.com' + short_href + 'locations?ref_=tt_dt_dt'
 	print (location_link)
+	location_source_code = requests.get(location_link)
+	location_plain_text = location_source_code.text
+	location_soup = BeautifulSoup(location_plain_text, "html.parser")
+	# <div id="filming_locations_content" class="header">
+	for loc_link in location_soup.find_all('div',{'id':'filming_locations_content'}):
+		print (loc_link)
 	
 print ('done')
 	
