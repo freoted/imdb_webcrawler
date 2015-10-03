@@ -46,15 +46,17 @@ for link in soup.find_all('td',{'class':'titleColumn'}):
                 #locationlink
                 location_link = 'http://www.imdb.com' + short_href + 'locations?ref_=tt_dt_dt'
                 print (location_link)
+
                 
                 location_source_code = requests.get(location_link)
                 location_plain_text = location_source_code.text
                 location_soup = BeautifulSoup(location_plain_text, "html.parser")
 
-                #prints name of location but also '7 of 7 found this interesting'
+                #prints name of location only
                 for loc_link in location_soup.find_all('div',{'id':'filming_locations_content'}):
-                        for i in loc_link.find_all('a'):
-                                print (i.contents[0])
+                        for dt_links in loc_link.find_all('dt'):
+                                for loc_name in dt_links.find_all('a'):
+                                        print (loc_name.contents[0])
                 link_count = link_count + 1
         else:
                 "program completed"
