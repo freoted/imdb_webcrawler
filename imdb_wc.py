@@ -45,10 +45,12 @@ for link in soup.find_all('td',{'class':'titleColumn'}):
                 #http://www.imdb.com/title/tt0111161/locations?ref_=tt_dt_dt
                 #locationlink
                 location_link = 'http://www.imdb.com' + short_href + 'locations?ref_=tt_dt_dt'
-                print (location_link)
+                #print (location_link)
                 #print movie title
+                print ("_________________________________________________________________")
                 title = link.find('a')
                 print (title.contents[0])
+                print (" ")
                 
 
                 location_source_code = requests.get(location_link)
