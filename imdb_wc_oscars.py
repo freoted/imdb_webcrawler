@@ -23,6 +23,7 @@
 #import dependencies
 import requests
 from bs4 import BeautifulSoup
+import re
 
 #This page lists the current top 250 movies on imdb
 url = 'http://www.imdb.com/search/title?count=100&groups=oscar_best_picture_winners&sort=year,desc&ref_=nv_ch_osc_3'
@@ -34,6 +35,8 @@ soup = BeautifulSoup(plain_text, "html.parser")
 
 #sets a counter so only the first few links are printed (for testing purposes)
 link_count = 0
+
+oscars_f = open('oscars.txt', 'a')
 
 #searches through BS4 object for all the title links
 for link in soup.find_all('td',{'class':'title'}):
@@ -54,11 +57,12 @@ for link in soup.find_all('td',{'class':'title'}):
                 for loc_link in location_soup.find_all('div',{'id':'filming_locations_content'}):
                         for dt_links in loc_link.find_all('dt'):
                                 for loc_name in dt_links.find_all('a'):
-                                        print ((title.contents[0])+ "/" + (loc_name.contents[0]))
+                                        oscars_f.write((title.contents[0])+ "/" + (loc_name.contents[0]))
                 link_count = link_count + 1
         else:
                 "program completed"
                 break
                 
+oscars_f.close()
 print ('done')
 	
