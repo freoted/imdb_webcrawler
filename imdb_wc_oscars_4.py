@@ -1,7 +1,7 @@
 # notes
 # imdb web crawler
 
-#This version - try reusing function for BeautifulSoup
+#This version - add country of origin
 
 #import dependencies
 import requests
@@ -27,18 +27,17 @@ def main():
                 
         #searches through BS4 object for all the title links
         for link in best_pic_soup.find_all('td',{'class':'title'}):
-                href = link.find('a').get('href')
-                #just print bit of link that you need
-                short_href = href[:17]
-                
-                location_link = 'http://www.imdb.com' + short_href + 'locations?ref_=tt_dt_dt'
 
+
+                #get title so you can print it in text file later
                 title = link.find('a')
+                href = link.find('a').get('href')
+                page_link = 'http://www.imdb.com' + href
+                location_link = page_link + 'locations?ref_=tt_dt_dt'
 
-                location_soup = soupRecipe(location_link)
+                filming_location_soup = soupRecipe(location_link)
 
-                #prints name of location only
-                for loc_link in location_soup.find_all('div',{'id':'filming_locations_content'}):
+                for loc_link in filming_location_soup.find_all('div',{'id':'filming_locations_content'}):
                         for dt_links in loc_link.find_all('dt'):
                                 for loc_name in dt_links.find_all('a'):
                                         oscars_f.write((title.contents[0])+ "," + (loc_name.contents[0]))
