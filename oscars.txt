@@ -170,8 +170,8 @@ Gladiator,Alabama Hills, Lone Pine, California, USA
 Gladiator,Ait Benhaddou, Morocco
 Gladiator,Shepperton Studios, Shepperton, Surrey, England, UK
 Gladiator,Atlas Corporation Studios, Ouarzazate, Morocco
-American Beauty,Sacramento, California, USA
 American Beauty,11388 Homedale Street, Brentwood, Los Angeles, California, USA
+American Beauty,Sacramento, California, USA
 American Beauty,20105 Saticoy Rd., Canoga Park, Los Angeles, California, USA
 American Beauty,Los Angeles Police Academy - 1880 N. Academy Drive, Elysian Park, Los Angeles, California, USA
 American Beauty,South Bay, Los Angeles, California, USA
@@ -269,9 +269,9 @@ Schindler's List,Auschwitz-Birkenau Concentration Camp, Oswiecim, Malopolskie, P
 Schindler's List,Plaszów, Kraków, Malopolskie, Poland
 Schindler's List,Kraków, Malopolskie, Poland
 Schindler's List,Szeroka, Kraków, Malopolskie, Poland
+Schindler's List,Jerusalem, Israel
 Schindler's List,Józefa, Kraków, Malopolskie, Poland
 Schindler's List,Most Pilsudskiego, Kraków, Malopolskie, Poland
-Schindler's List,Jerusalem, Israel
 Unforgiven,Alberta, Canada
 Unforgiven,Brooks, Alberta, Canada
 Unforgiven,Longview, Alberta, Canada
@@ -642,16 +642,16 @@ The Godfather,Radio City Music Hall - 1260 6th Avenue, Rockefeller Center, Manha
 The Godfather,Riverdale, Bronx, New York City, New York, USA
 The Godfather,Liberty State Park - Morris Pesin Drive, Jersey City, New Jersey, USA
 The Godfather,Hollywood, Los Angeles, California, USA
-The French Connection,Marseille, Bouches-du-Rhône, France
 The French Connection,Château d'If, Marseille, Bouches-du-Rhône, France
+The French Connection,86th Street, Brooklyn, New York City, New York, USA
+The French Connection,Marseille, Bouches-du-Rhône, France
 The French Connection,Le Copain 891 1st Ave, New York City, New York, USA
 The French Connection,Brooklyn Bridge, New York City, New York, USA
-The French Connection,86th Street, Brooklyn, New York City, New York, USA
+The French Connection,Rue du Vallon des Auffes, Marseille, Bouches-du-Rhône, France
+The French Connection,La samaritaine - 2 Quai du Vieux-Port, Marseille, Bouches-du-Rhône, France
 The French Connection,Roosevelt Hotel - 45th Street & Madison Avenue, Manhattan, New York City, New York, USA
 The French Connection,Westbury Hotel - 15 East 69th Street, Manhattan, New York City, New York, USA
-The French Connection,Rue du Vallon des Auffes, Marseille, Bouches-du-Rhône, France
 The French Connection,Chez Fonfon - 140 Rue du Vallon des Auffes, Marseille, Bouches-du-Rhône, France
-The French Connection,La samaritaine - 2 Quai du Vieux-Port, Marseille, Bouches-du-Rhône, France
 The French Connection,Quai du Vieux Port, Marseille, Bouches-du-Rhône, France
 The French Connection,Montée des Accoules, Marseille, Bouches-du-Rhône, France
 The French Connection,Rue Baussenque, Marseille, Bouches-du-Rhône, France
@@ -751,22 +751,22 @@ Lawrence of Arabia,Ait Benhaddou, Morocco
 Lawrence of Arabia,Alfonso XIII Hotel - 2 San Fernando 41004, Sevilla, Andalucía, Spain
 Lawrence of Arabia,Aït Benhaddou, Morocco
 Lawrence of Arabia,El Casino, Avenida de Maria Luisa, Sevilla, Andalucía, Spain
+Lawrence of Arabia,El Jafr, Jordan
 Lawrence of Arabia,Playa del Algorocibo, Andalucía, Spain
 Lawrence of Arabia,Chobham Common, Surrey, England, UK
-Lawrence of Arabia,El Jafr, Jordan
 Lawrence of Arabia,Ouarzazate, Morocco
 Lawrence of Arabia,Plaza de España, Sevilla, Sevilla, Andalucía, Spain
 Lawrence of Arabia,Wadi Rum, Jordan
+Lawrence of Arabia,Jebel Tubeiq, Jordan
 Lawrence of Arabia,Desierto de Tabernas, Almería, Andalucía, Spain
 Lawrence of Arabia,Genovese Beach, San José, Almería, Andalucía, Spain
-Lawrence of Arabia,Jebel Tubeiq, Jordan
+Lawrence of Arabia,Maan, Jordan
 Lawrence of Arabia,Merthyr Mawr, Bridgend, Wales, UK
 Lawrence of Arabia,Parque de Maria Luisa, Avenida de Isabel la Catolica, Sevilla, Andalucía, Spain
 Lawrence of Arabia,Tabernas, Almería, Andalucía, Spain
 Lawrence of Arabia,Cabo de Gata, Almería, Andalucía, Spain
 Lawrence of Arabia,Casa de Pilatos, Plaza de Pilatos, Sevilla, Andalucía, Spain
 Lawrence of Arabia,El Algarrobico Beach, Carboneras, Almería, Andalucía, Spain
-Lawrence of Arabia,Maan, Jordan
 Lawrence of Arabia,Palacio Espanol, Plaza de España, Sevilla, Sevilla, Andalucía, Spain
 Lawrence of Arabia,Plaza de Pilatos, Sevilla, Andalucía, Spain
 Lawrence of Arabia,Plaza of the Americas, Sevilla, Andalucía, Spain
@@ -788,9 +788,9 @@ West Side Story,Church of Saint Paul the Apostle, Columbus Avenue & West 60th St
 West Side Story,New York City, New York, USA
 The Apartment,Majestic Theater, 247 West 44th Street, Manhattan, New York City, New York, USA
 The Apartment,The Lot - 1041 N. Formosa Avenue, West Hollywood, California, USA
-The Apartment,New York City, New York, USA
 The Apartment,205 Columbus Avenue, New York City, New York, USA
 The Apartment,59th Street, Manhattan, New York City, New York, USA
+The Apartment,New York City, New York, USA
 Ben-Hur,Corner of Via di Salone and Via delle Case Rosse, Salone Caves, Rome, Lazio, Italy
 Ben-Hur,the roman fra hippodrome in Tyre, Lebanon
 Ben-Hur,Anzio, Italy
@@ -905,8 +905,8 @@ From Here to Eternity,Schofield Barracks, Wilkina Drive, O'ahu, Hawaii, USA
 From Here to Eternity,Waialae Golf Course - 4997 Kahala Avenue, Honolulu, O'ahu, Hawaii, USA
 From Here to Eternity,Waikiki Beach, Honolulu, O'ahu, Hawaii, USA
 The Greatest Show on Earth,Sarasota, Florida, USA
-The Greatest Show on Earth,Paramount Studios - 5555 Melrose Avenue, Hollywood, Los Angeles, California, USA
 The Greatest Show on Earth,Sarasota Springs, Florida, USA
+The Greatest Show on Earth,Paramount Studios - 5555 Melrose Avenue, Hollywood, Los Angeles, California, USA
 The Greatest Show on Earth,Washington, District of Columbia, USA
 The Greatest Show on Earth,Cedar City, Utah, USA
 The Greatest Show on Earth,Philadelphia, Pennsylvania, USA
@@ -951,6 +951,7 @@ Going My Way,Saint Monica's Catholic Church - 715 California Avenue, Santa Monic
 Going My Way,Lakeside Country Club - 4500 W. Lakeside Drive, Toluca Lake, Los Angeles, California, USA
 Going My Way,Paramount Studios - 5555 Melrose Avenue, Hollywood, Los Angeles, California, USA
 Going My Way,Shrine Auditorium - 665 W. Jefferson Boulevard, Los Angeles, California, USA
+Mrs. Miniver,Metro-Goldwyn-Mayer Studios - 10202 W. Washington Blvd., Culver City, California, USA
 Casablanca,Flagstaff, Arizona, USA
 Casablanca,Hotel Monte Vista, Flagstaff, Arizona, USA
 Casablanca,Metropolitan Airport - 6590 Hayvenhurst Avenue, Van Nuys, Los Angeles, California, USA
@@ -969,7 +970,6 @@ Casablanca,Stage 6, Warner Brothers Burbank Studios - 4000 Warner Boulevard, Bur
 Casablanca,Stage 8, Warner Brothers Burbank Studios - 4000 Warner Boulevard, Burbank, California, USA
 Casablanca,Stage 9, Warner Brothers Burbank Studios - 4000 Warner Boulevard, Burbank, California, USA
 Casablanca,Stage 25, Warner Brothers Burbank Studios - 4000 Warner Boulevard, Burbank, California, USA
-Mrs. Miniver,Metro-Goldwyn-Mayer Studios - 10202 W. Washington Blvd., Culver City, California, USA
 How Green Was My Valley,Brent's Crags, California, USA
 How Green Was My Valley,Malibu, California, USA
 How Green Was My Valley,Santa Monica Mountains, Los Angeles, California, USA
