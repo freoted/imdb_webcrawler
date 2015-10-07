@@ -28,15 +28,21 @@ def main():
         #searches through BS4 object for all the title links
         for link in best_pic_soup.find_all('td',{'class':'title'}):
 
-
                 #get title so you can print it in text file later
                 title = link.find('a')
                 href = link.find('a').get('href')
                 page_link = 'http://www.imdb.com' + href
                 location_link = page_link + 'locations?ref_=tt_dt_dt'
 
-                filming_location_soup = soupRecipe(location_link)
+                country_of_origin_soup = soupRecipe(page_link)
 
+                #<div class="article" id="titleDetails">
+
+                for link in country_of_origin_soup.find_all('div', {'id':'titleDetails'}):
+                        href1 = link.find('a').get('href')
+                        print ("each link in country of origin soup " + href1)
+                        
+                filming_location_soup = soupRecipe(location_link)
                 for loc_link in filming_location_soup.find_all('div',{'id':'filming_locations_content'}):
                         for dt_links in loc_link.find_all('dt'):
                                 for loc_name in dt_links.find_all('a'):
