@@ -1,24 +1,3 @@
-# notes
-# imdb web crawler
-
-#Future work:
-##Get rid of the 'x of y found this interesting' - DONE
-##Change initial page to best picture winner from imdb instead of Top 250 movies.
-##Get name of the movie - DONE
-##Use while loop to limit number of results (for testing) - DONE
-##Get map format that calculates number of overlapping variables and displays that no
-##on the map
-##Put each variable (movie name, link, location) in a new column, or seperated by forward slash -DONE
-##Export to excel?
-
-
-# Example - Shawshank Redemption
-# http://www.imdb.com/title/tt0111161/
-# Page of filming locations
-# http://www.imdb.com/title/tt0111161/locations?ref_=tt_dt_dt
-
-# Relevant div id
-# <div id="filming_locations_content" class="header">
 
 #import dependencies
 import requests

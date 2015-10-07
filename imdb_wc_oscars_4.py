@@ -37,16 +37,22 @@ def main():
                 country_of_origin_soup = soupRecipe(page_link)
 
                 #<div class="article" id="titleDetails">
+        ##              <div class="txt-block">
+        ##              <h4 class="inline">Country:</h4>
+        ##              <a href="/country/us?ref_=tt_dt_dt" itemprop="url">USA</a>
+        ##              <span class="ghost">|</span>
+        ##              <a href="/country/gb?ref_=tt_dt_dt" itemprop="url">UK</a>
+        ##              </div>
 
                 for link in country_of_origin_soup.find_all('div', {'id':'titleDetails'}):
                         href1 = link.find('a').get('href')
                         print ("each link in country of origin soup " + href1)
                         
-                filming_location_soup = soupRecipe(location_link)
-                for loc_link in filming_location_soup.find_all('div',{'id':'filming_locations_content'}):
-                        for dt_links in loc_link.find_all('dt'):
-                                for loc_name in dt_links.find_all('a'):
-                                        oscars_f.write((title.contents[0])+ "," + (loc_name.contents[0]))
+##                filming_location_soup = soupRecipe(location_link)
+##                for loc_link in filming_location_soup.find_all('div',{'id':'filming_locations_content'}):
+##                        for dt_links in loc_link.find_all('dt'):
+##                                for loc_name in dt_links.find_all('a'):
+##                                        oscars_f.write((title.contents[0])+ "," + (loc_name.contents[0]))
 
                 
         oscars_f.close()
