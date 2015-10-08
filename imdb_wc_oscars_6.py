@@ -1,4 +1,8 @@
 #this version - print from one link only
+#it works!!
+
+#to do - add to a list
+
 
 #import dependencies
 import requests
@@ -25,6 +29,7 @@ def main():
 #how do I get just the links under h4 country?
         for item1 in slave_soup.find_all('div', {'class' : 'txt-block'}):
                 for item2 in item1.find_all('a'):
-                        print (item2.contents[0])
+                        if '/country/' in item2['href']:
+                                print (item2.contents[0])
         print ('done')
 main()

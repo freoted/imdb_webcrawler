@@ -35,20 +35,14 @@ def main():
                 location_link = page_link + 'locations?ref_=tt_dt_dt'
 
                 country_of_origin_soup = soupRecipe(page_link)
-
-                #<div class="article" id="titleDetails">
-        ##              <div class="txt-block">
-        ##              <h4 class="inline">Country:</h4>
-        ##              <a href="/country/us?ref_=tt_dt_dt" itemprop="url">USA</a>
-        ##              <span class="ghost">|</span>
-        ##              <a href="/country/gb?ref_=tt_dt_dt" itemprop="url">UK</a>
-        ##              </div>
-
-                for link in country_of_origin_soup.find_all('div', {'id':'titleDetails'}):
-                        href1 = link.find('a').get('href')
-                        print ("each link in country of origin soup " + href1)
+                
+                for item1 in country_of_origin_soup('div', {'class' : 'txt-block'}):
+                        for item2 in item1.find_all('a'):
+                                if '/country/' in item2['href']:
+                                        print (item2.contents[0])
                         
                 filming_location_soup = soupRecipe(location_link)
+                
                 for loc_link in filming_location_soup.find_all('div',{'id':'filming_locations_content'}):
                         for dt_links in loc_link.find_all('dt'):
                                 for loc_name in dt_links.find_all('a'):
@@ -56,4 +50,6 @@ def main():
 
                 
         oscars_f.close()
+        
+main()
 
