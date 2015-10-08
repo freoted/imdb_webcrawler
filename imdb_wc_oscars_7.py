@@ -34,12 +34,15 @@ def main():
                 page_link = 'http://www.imdb.com' + href
                 location_link = page_link + 'locations?ref_=tt_dt_dt'
 
+                #This prints the title and the country of origin to a text file
+                #nb not the same text file as the one with the main location information.
+                #This is a lazy but I don't know how to do that and I've spent enough time
+                #on the code for the moment. I want to make a map!
                 country_of_origin_soup = soupRecipe(page_link)
-                
                 for item1 in country_of_origin_soup('div', {'class' : 'txt-block'}):
                         for item2 in item1.find_all('a'):
                                 if '/country/' in item2['href']:
-                                        print (item2.contents[0])
+                                        print ((title.contents[0])+ ","+item2.contents[0])
                         
                 filming_location_soup = soupRecipe(location_link)
                 
