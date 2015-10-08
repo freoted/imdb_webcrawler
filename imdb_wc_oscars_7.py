@@ -2,6 +2,7 @@
 # imdb web crawler
 
 #This version - add country of origin
+#working! Prints it to a seperate text file, but that's okay.
 
 #import dependencies
 import requests
@@ -15,9 +16,11 @@ def soupRecipe(url):
 
 
 def main():
-        #open oscars file
-        oscars_f = open('oscars.txt', 'a')
-        print ("printing file")
+        #open filming_locations file
+        filming_locations_f = open('filming_locations.txt', 'a')
+
+        #open country_of_origin file
+        country_of_origin_f = open('country_of_origin.txt', 'a')
 
         #This page lists the current best picture winning movies on imdb
         best_pic_url = 'http://www.imdb.com/search/title?count=100&groups=oscar_best_picture_winners&sort=year,desc&ref_=nv_ch_osc_3'
@@ -42,17 +45,19 @@ def main():
                 for item1 in country_of_origin_soup('div', {'class' : 'txt-block'}):
                         for item2 in item1.find_all('a'):
                                 if '/country/' in item2['href']:
-                                        print ((title.contents[0])+ ","+item2.contents[0])
+                                        country_of_origin_f.write((title.contents[0])+ ","+item2.contents[0]+ ",\n")
                         
-                filming_location_soup = soupRecipe(location_link)
+##                filming_location_soup = soupRecipe(location_link)
+##                
+##                for loc_link in filming_location_soup.find_all('div',{'id':'filming_locations_content'}):
+##                        for dt_links in loc_link.find_all('dt'):
+##                                for loc_name in dt_links.find_all('a'):
+##                                        filming_locations_f.write((title.contents[0])+ "," + (loc_name.contents[0]))
+#                print(title.contents[0])
                 
-                for loc_link in filming_location_soup.find_all('div',{'id':'filming_locations_content'}):
-                        for dt_links in loc_link.find_all('dt'):
-                                for loc_name in dt_links.find_all('a'):
-                                        oscars_f.write((title.contents[0])+ "," + (loc_name.contents[0]))
-
-                
-        oscars_f.close()
+        country_of_origin_f.close()
+        filming_locations_f.close()
+        
         
 main()
 
